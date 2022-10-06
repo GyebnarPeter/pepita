@@ -22,6 +22,6 @@ A menü gombja a terveken mindenhol a kijelző jobb oldalán helyezkedik el, kiv
 Igaz nem volt feladat, de írtam egy scriptet a jegyszámláló rész működéséhez, ami jegyenként 8$-al számol, és írja a végösszeget is. 0 alá nem tudunk menni, felette viszont nincs korlátozva.
 
 ## Továbbiak
-Az oldal teljesen reszponzív. A maximum szélességet 1400px-nél határoztam meg, efelett a tartalom középre van igazítva.__
-Semmilyen keretrendszert nem használtam.__
-A projekt elvégzéséhez ráfordított idő összesen kb 5 óra volt.__
+Az oldal teljesen reszponzív. A maximum szélességet 1400px-nél határoztam meg, efelett a tartalom középre van igazítva. <br />
+Semmilyen keretrendszert nem használtam. <br />
+A projekt elvégzéséhez ráfordított idő összesen kb 5 óra volt.

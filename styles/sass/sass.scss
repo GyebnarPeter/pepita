@@ -8,6 +8,7 @@
 
 body {
     font-family: $montserrat;
+    overflow-x: hidden;
 }
 
 .link {
@@ -25,7 +26,7 @@ body {
     padding: 20px;
     box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
     transform: translateX(-320px);
-    transition: .4s ease-in-out;
+    transition: $transition--slow;
 }
 
 .nav-open {
@@ -64,6 +65,11 @@ body {
 
     &__item {
         margin-top: 15px;
+        transition: $transition--fast;
+
+        &:hover {
+            background: rgb(236, 121, 121);
+        }
     }
 
     &__link {
@@ -105,10 +111,10 @@ body {
 }
 
 .content {
-    padding: 0 12px 0;
+    padding: 0 12px 12px;
     max-width: 1400px;
     margin: auto;
-    transition: .4s ease-in-out;
+    transition: $transition--slow;
 }
 
 .content-offset {
@@ -151,12 +157,15 @@ body {
     }
 }
 
-.collection-search {
+.collections-search {
     width: 100%;
     max-width: 900px;
-    height: 48px;
-    position: relative;
     margin: 20px auto 0;
+    
+    &__inputs {
+        height: 48px;
+        position: relative;
+    }
 
     input {
         width: 100%;
@@ -171,6 +180,14 @@ body {
             font-size: 18px;
         }
     }
+    
+    button {
+        @include default-button;
+        
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
 
     span {
         font-size: 12px;
@@ -179,12 +196,48 @@ body {
         margin-top: 5px;
         display: block;
     }
+}
 
-    button {
-       @include default-button;
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    
+    @include sm {
+        margin-top: 30px;
+    }
+}
 
-       position: absolute;
-       top: 0;
-       right: 10px;
+.tile {
+    width: calc(50% - 10px);
+
+    figure img {
+        width: 100%;
+        transition: $transition--fast;
+    }
+
+    figcaption {
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &:hover img {
+        filter: grayscale(100%);
+    }
+
+    @include sm {
+        width: calc(33.3333% - 15px);
+    }
+
+    @include lg {
+        width: calc(25% - 15px);
+
+        figcaption {
+            font-size: 16px;
+            margin-top: 5px;
+        }
     }
 }

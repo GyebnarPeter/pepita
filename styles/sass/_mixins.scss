@@ -23,7 +23,7 @@
     @media screen and (min-width: map-get($breakpoints, "lg")) { 
         @content; 
     }
-}
+} 
 
 // Center position
 @mixin center {

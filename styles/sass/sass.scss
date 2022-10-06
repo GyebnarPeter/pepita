@@ -33,30 +33,26 @@ body {
 }
 
 .nav-search {
-    height: 42px;
     display: flex;
     gap: 10px;
+    height: 42px;
 
     input {
-        height: 100%;
         flex: 1;
-        padding: 10px;
         border: 2px solid white;
+        height: 100%;
+        padding: 10px;
         background: none;
 
         &::placeholder {
-            color: white;
             font-family: $montserrat;
             font-size: 18px;
+            color: white;
         }
     }
 
     button {
-        height: 100%;
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
+        @include default-button;
     }
 }
 
@@ -96,7 +92,7 @@ body {
         width: 100%;
         height: 2px;
         background: black;
-    }
+    }            
 
     @include sm {
         width: 22px;
@@ -152,5 +148,43 @@ body {
         color: $primary-color;
         text-align: center;
         width: 100%;
+    }
+}
+
+.collection-search {
+    width: 100%;
+    max-width: 900px;
+    height: 48px;
+    position: relative;
+    margin: 20px auto 0;
+
+    input {
+        width: 100%;
+        height: 100%;
+        border: 2px solid $primary-color;
+        padding: 10px;
+
+        &::placeholder {
+            color: $primary-color;
+            font-family: $montserrat;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+
+    span {
+        font-size: 12px;
+        color: $primary-color;
+        font-weight: 600;
+        margin-top: 5px;
+        display: block;
+    }
+
+    button {
+       @include default-button;
+
+       position: absolute;
+       top: 0;
+       right: 10px;
     }
 }

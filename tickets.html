@@ -128,9 +128,9 @@
                     <div class="quantity__item">
                         <div class="quantity__type">Adults</div>
                         <div class="quantity__select">
-                            <button class="decrease">-</button>
-                            <span class="quantity__value">2</span>
-                            <button class="increase">+</button>
+                            <button class="quantity-btn decrease" data-id="adult">-</button>
+                            <span class="quantity__value" id="adult">2</span>
+                            <button class="quantity-btn increase" data-id="adult">+</button>
                         </div>
                     </div>
                     <div class="quantity__item">
@@ -139,9 +139,9 @@
                             <span>65+ with ID</span>
                         </div>
                         <div class="quantity__select">
-                            <button class="decrease">-</button>
-                            <span class="quantity__value">0</span>
-                            <button class="increase">+</button>
+                            <button class="quantity-btn decrease" data-id="senior">-</button>
+                            <span class="quantity__value" id="senior">0</span>
+                            <button class="quantity-btn increase" data-id="senior">+</button>
                         </div>
                     </div>
                     <div class="quantity__item">
@@ -150,9 +150,9 @@
                             <span>with ID</span>
                         </div>
                         <div class="quantity__select">
-                            <button class="decrease">-</button>
-                            <span class="quantity__value">0</span>
-                            <button class="increase">+</button>
+                            <button class="quantity-btn decrease" data-id="student">-</button>
+                            <span class="quantity__value" id="student">0</span>
+                            <button class="quantity-btn increase" data-id="student">+</button>
                         </div>
                     </div>
                 </div>
@@ -170,6 +170,7 @@
     </div>
 
     <script src="js/nav.js"></script>
+    <script src="js/quantity.js"></script>
     
 </body>
 </html>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,6 +48,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: white;
+  transform: translateY(2px);
 }
 .nav-search button {
   height: 100%;
@@ -158,6 +160,8 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  /* clears the ‘X’ from Internet Explorer */
+  /* clears the ‘X’ from Chrome */
 }
 .collections-search__inputs {
   height: 48px;
@@ -174,6 +178,23 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 18px;
+  transform: translateY(2px);
+}
+.collections-search input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.collections-search input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.collections-search input[type=search]::-webkit-search-decoration,
+.collections-search input[type=search]::-webkit-search-cancel-button,
+.collections-search input[type=search]::-webkit-search-results-button,
+.collections-search input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 .collections-search button {
   height: 100%;

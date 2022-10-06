@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/css/styles.css">
     <link rel="icon" href="images/favicon.png" sizes="256x256" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
-    <title>The Art Museum - Collections</title>
+    <title>The Art Museum - Tickets</title>
 </head>
 <body>
 
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="header__item">
-                <h1 class="header__title">Collections</h1>
+                <h1 class="header__title">Plan Your Visit</h1>
             </div>
             <div class="header__item">
                 <div class="nav-btn toggle-item">
@@ -99,91 +99,73 @@
             </div>
         </header>
 
-        <main class="colletcions">
-            <form class="collections-search" role="search">
-                <div class="collections-search__inputs">
-                    <input type="search" name="collections-search" placeholder="Explore the Collection">
-                    <button type="submit">
-                        <img src="images/search-red.svg" alt="search">
-                    </button>
-                </div>
-                <span>Advanced Search</span>
-            </form>
-
-            <section class="tiles">
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-1.png" alt="decorative arts & crafts">
-                        <figcaption>Decorative arts & crafts</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-2.png" alt="american impressionism">
-                        <figcaption>American impressionism</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-3.png" alt="de stijl">
-                        <figcaption>De stijl</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-4.png" alt="cubism">
-                        <figcaption>Cubism</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-5.png" alt="American">
-                        <figcaption>American</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-6.png" alt="greek antiquities">
-                        <figcaption>Greek antiquities</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-1.png" alt="decorative arts & crafts">
-                        <figcaption>Decorative arts & crafts</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-2.png" alt="american impressionism">
-                        <figcaption>American impressionism</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-3.png" alt="de stijl">
-                        <figcaption>De stijl</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-4.png" alt="cubism">
-                        <figcaption>Cubism</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-5.png" alt="American">
-                        <figcaption>American</figcaption>
-                    </figure>
-                </a>
-                <a href="" class="tile link">
-                    <figure>
-                        <img src="images/tile-6.png" alt="greek antiquities">
-                        <figcaption>Greek antiquities</figcaption>
-                    </figure>
-                </a>
+        <main class="tickets">
+            <section class="tickets__header">
+                <h2>Skip the Line. Purchase Tickets.</h2>
+                <p>All exhibitions, audio tours, and films included in the price of admission.</p>
             </section>
+
+            <section class="date">
+                <div class="date__items">
+                    <div class="date__item">
+                        <span>Today</span>
+                    </div>
+                    <div class="date__item date__item--selected">
+                        <span>Tomorrow</span>
+                    </div>
+                    <div class="date__item">
+                        <span>Other</span>
+                    </div>
+                </div>
+                <div class="date__details">
+                    <time datetime="2016-03-22">March 22, 2016</time>
+                    <span class="date__open">Open 10:30am-5:30pm</span>
+                </div>
+            </section>
+
+            <section class="quantity">
+                <div class="quantity__items">
+                    <div class="quantity__item">
+                        <div class="quantity__type">Adults</div>
+                        <div class="quantity__select">
+                            <button class="decrease">-</button>
+                            <span class="quantity__value">2</span>
+                            <button class="increase">+</button>
+                        </div>
+                    </div>
+                    <div class="quantity__item">
+                        <div class="quantity__type">
+                            Senior
+                            <span>65+ with ID</span>
+                        </div>
+                        <div class="quantity__select">
+                            <button class="decrease">-</button>
+                            <span class="quantity__value">0</span>
+                            <button class="increase">+</button>
+                        </div>
+                    </div>
+                    <div class="quantity__item">
+                        <div class="quantity__type">
+                            Students
+                            <span>with ID</span>
+                        </div>
+                        <div class="quantity__select">
+                            <button class="decrease">-</button>
+                            <span class="quantity__value">0</span>
+                            <button class="increase">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="total">
+                <span class="total__item total__title">Total</span>
+                <span class="total__item total__price">$16</span>
+            </section>
+
+            <button class="payment-button">
+                Continue to Payment
+            </button>
         </main>
     </div>
 

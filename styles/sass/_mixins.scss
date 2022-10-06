@@ -1,6 +1,6 @@
-// Media Queries
-@import "breakpoints";
+@import "variables";
 
+// Media Queries
 @mixin xs {
     @media screen and (min-width: map-get($breakpoints, "xs")) { 
         @content; 
@@ -39,4 +39,23 @@
     border: none;
     padding: 0;
     cursor: pointer;
+}
+
+// Button
+@mixin button($color, $background) {
+    @include default-button();
+
+    color: $color;
+    background: $background;
+    display: block;
+    font-size: 12px;
+    padding: 12px 68px;
+    font-weight: 500;
+    font-family: $montserrat;
+    box-shadow: $bottom-shadow;
+    transition: $transition--fast;
+
+    &:hover {
+        background: $hover-color;
+    }
 }

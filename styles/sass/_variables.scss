@@ -1,9 +1,27 @@
-// Colors
-$primary-color: #FF473A;
+// Breakpoints
+$breakpoints: (
+    "xs": 480px,
+    "sm": 720px,
+    "md": 960px,
+    "lg": 1200px
+);
 
 // Font
 $montserrat: 'Montserrat', sans-serif;
 
+// Max width
+$max-width--small: 500px; 
+$max-width--medium: 800px; 
+$max-width--large: 1400px; 
+
+// Colors
+$primary-color: #FF473A;
+$secondary-color: #D4D4D4;
+$hover-color: #ec7979;
+
 // Transitions
 $transition--slow: .4s ease-in-out;
 $transition--fast: .2s ease-in-out;
+
+// Box shadow
+$bottom-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

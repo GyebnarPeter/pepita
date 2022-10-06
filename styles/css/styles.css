@@ -5,6 +5,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   overflow-x: hidden;
 }
 
@@ -72,7 +73,6 @@ body {
   display: flex;
   align-items: center;
   height: 40px;
-  font-weight: 500;
 }
 .nav-list__icon {
   width: 40px;
@@ -98,7 +98,7 @@ body {
 @media screen and (min-width: 720px) {
   .nav-btn {
     width: 22px;
-    height: 14px;
+    height: 13px;
   }
 }
 
@@ -107,8 +107,8 @@ body {
 }
 
 .content {
-  padding: 0 12px 12px;
   max-width: 1400px;
+  padding: 0 12px 12px;
   margin: auto;
   transition: 0.4s ease-in-out;
 }
@@ -120,11 +120,15 @@ body {
 .header {
   height: 60px;
   display: flex;
+  margin-bottom: 20px;
 }
 .header__item {
   flex: 1;
   display: flex;
   align-items: center;
+}
+.header__item:nth-child(2) {
+  flex: 2;
 }
 .header__item:nth-child(3) {
   display: flex;
@@ -152,8 +156,8 @@ body {
 
 .collections-search {
   width: 100%;
-  max-width: 900px;
-  margin: 20px auto 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .collections-search__inputs {
   height: 48px;
@@ -230,6 +234,173 @@ body {
     font-size: 16px;
     margin-top: 5px;
   }
+}
+
+.tickets__header {
+  width: 250px;
+}
+.tickets__header h2 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.tickets__header p {
+  font-size: 12px;
+  color: #FF473A;
+  font-weight: 600;
+}
+@media screen and (min-width: 720px) {
+  .tickets__header {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.date {
+  max-width: 800px;
+  margin: 20px auto;
+}
+.date__items {
+  border-bottom: 2px solid #D4D4D4;
+  color: #D4D4D4;
+  margin-bottom: 5px;
+  display: flex;
+  font-size: 18px;
+}
+.date__item {
+  flex: 1;
+  display: flex;
+  padding: 0 10px;
+}
+.date__item:nth-child(1) {
+  justify-content: start;
+}
+.date__item:nth-child(2) {
+  justify-content: center;
+}
+.date__item:nth-child(3) {
+  justify-content: end;
+}
+.date__item span {
+  height: 30px;
+  padding-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.date__item span:hover {
+  color: black;
+}
+.date__item span:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: #FF473A;
+  display: block;
+}
+.date__item--selected {
+  color: black;
+}
+.date__item--selected span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: #FF473A;
+  display: block;
+}
+.date__details {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+.date__details span {
+  display: block;
+}
+
+.quantity {
+  max-width: 500px;
+  margin: 40px auto;
+  font-size: 18px;
+}
+.quantity__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+}
+.quantity__item:first-child .quantity__value {
+  color: black;
+}
+.quantity__type span {
+  display: block;
+  color: #D4D4D4;
+  font-size: 12px;
+}
+.quantity__select {
+  display: flex;
+  align-items: center;
+  color: #D4D4D4;
+}
+.quantity__select button {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #D4D4D4;
+  color: #D4D4D4;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  cursor: pointer;
+}
+.quantity__select button.increase {
+  padding-top: 4px;
+}
+.quantity__value {
+  width: 25px;
+  text-align: center;
+}
+
+.total {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  border-top: 3px solid red;
+}
+.total__item {
+  width: 60px;
+}
+.total__price {
+  text-align: center;
+}
+
+.payment-button {
+  height: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  background: #FF473A;
+  display: block;
+  font-size: 12px;
+  padding: 12px 68px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.2s ease-in-out;
+  margin: auto;
+}
+.payment-button:hover {
+  background: #ec7979;
 }
 
 /*# sourceMappingURL=styles.css.map */

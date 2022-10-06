@@ -8,6 +8,7 @@
 
 body {
     font-family: $montserrat;
+    font-weight: 500;
     overflow-x: hidden;
 }
 
@@ -68,7 +69,7 @@ body {
         transition: $transition--fast;
 
         &:hover {
-            background: rgb(236, 121, 121);
+            background: $hover-color
         }
     }
 
@@ -76,7 +77,6 @@ body {
         display: flex;
         align-items: center;
         height: 40px;
-        font-weight: 500;
     }
 
     &__icon {
@@ -102,7 +102,7 @@ body {
 
     @include sm {
         width: 22px;
-        height: 14px;
+        height: 13px;
     }
 }
 
@@ -111,8 +111,8 @@ body {
 }
 
 .content {
+    max-width: $max-width--large;
     padding: 0 12px 12px;
-    max-width: 1400px;
     margin: auto;
     transition: $transition--slow;
 }
@@ -124,12 +124,17 @@ body {
 .header {
     height: 60px;
     display: flex;
+    margin-bottom: 20px;
     
     &__item {
         flex: 1;
         display: flex;
         align-items: center;
         
+        &:nth-child(2) {
+            flex: 2;
+        }
+
         &:nth-child(3) {
             display: flex;
             justify-content: flex-end;
@@ -159,8 +164,8 @@ body {
 
 .collections-search {
     width: 100%;
-    max-width: 900px;
-    margin: 20px auto 0;
+    max-width: $max-width--medium;
+    margin: 0 auto;
     
     &__inputs {
         height: 48px;
@@ -240,4 +245,171 @@ body {
             margin-top: 5px;
         }
     }
+}
+
+.tickets {
+    &__header {
+        width: 250px;
+
+        h2 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 12px;
+            color: $primary-color;
+            font-weight: 600;
+        }
+
+        @include sm {
+            margin: auto;
+            text-align: center;
+        }
+    }
+}
+
+.date {
+    max-width: $max-width--medium;
+    margin: 20px auto;
+
+    &__items {
+        border-bottom: 2px solid $secondary-color;
+        color: $secondary-color;
+        margin-bottom: 5px;
+        display: flex;
+        font-size: 18px;
+    }
+
+    &__item {
+        flex: 1;
+        display: flex;
+        padding: 0 10px;
+
+        &:nth-child(1) { justify-content: start }
+        &:nth-child(2) { justify-content: center }
+        &:nth-child(3) { justify-content: end; }
+
+        span {
+            height: 30px;
+            padding-bottom: 10px;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 3px;
+                    background: $primary-color;
+                    display: block;
+                }
+            }
+        }
+
+        &--selected {
+            color: black;
+
+            span::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                width: 100%;
+                height: 3px;
+                background: $primary-color;
+                display: block;
+            }
+        }
+    }
+
+    &__details {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.quantity {
+    max-width: $max-width--small;
+    margin: 40px auto;
+    font-size: 18px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding: 0 10px;
+
+        &:first-child .quantity__value {
+            color: black;
+        }
+    }
+    
+    &__type span {
+        display: block;
+        color: $secondary-color;
+        font-size: 12px;
+    }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        color: $secondary-color;
+        
+        button {
+            width: 18px;
+            height: 18px;
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+            background: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+            cursor: pointer;
+
+            &.increase {
+                padding-top: 4px;
+            }
+        }
+    }
+
+    &__value {
+        width: 25px;
+        text-align: center;
+    }
+}
+
+.total {
+    max-width: $max-width--small;
+    margin: 0 auto 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    border-top: 3px solid red;
+
+    &__item {
+        width: 60px;
+    }
+
+    &__price {
+        text-align: center;
+    }
+}
+
+.payment-button {
+    @include button(white, $primary-color);
+    margin: auto;
 }

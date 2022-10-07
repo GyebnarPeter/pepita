@@ -41,6 +41,27 @@
     cursor: pointer;
 }
 
+// Input
+@mixin input($color) {
+    height: 100%;
+    background: none;
+    font-family: $montserrat;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid $color;
+    color: $color;
+
+    &::placeholder {
+        font-family: $montserrat;
+        font-size: 18px;
+        color: $color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
 // Button
 @mixin button($color, $background) {
     @include default-button();

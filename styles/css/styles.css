@@ -10,21 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* input {
-    background: none;
-    font-family: $montserrat;
-    font-size: 18px;
-    padding: 10px;
-
-    &::placeholder {
-        font-family: $montserrat;
-        font-size: 18px;
-    }
-
-    &:focus {
-        outline: none;
-    }
-} */
 .link {
   text-decoration: none;
   color: inherit;
